@@ -61,3 +61,4 @@ sudo vi .env
 
 #13 restart server
 sudo service httpd restart
+
