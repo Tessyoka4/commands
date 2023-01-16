@@ -1,4 +1,4 @@
-# Check if ssh-agent is running
+# Check if ssh-agent is running (run powershell as admin)
 Get-Service ssh-agent
 
 # Start the service
@@ -13,4 +13,5 @@ Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 # Now load your key files into the ssh-agent
 ssh-add C:\Users\frank\project-2023.pem
 
-# SSH into the instance (bastion host) in the public subnet. Remember to allow agent forwarding
+# SSH into the instance (bastion host) in the public subnet in new powershell. Remember to allow agent forwarding
+ssh -A ec2-user@ip
